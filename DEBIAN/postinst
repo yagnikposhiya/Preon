@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+
+# Ensure /usr/local/bin/preon exists
+if [ ! -f /usr/local/bin/preon ]; then
+    echo "Error: /usr/local/bin/preon not found!"
+    exit 1
+fi
+
+chmod +x /usr/local/bin/preon # Set correct permissions
+ln -sf /usr/local/bin/preon /usr/bin/preon # Create a symlink in /usr/bin
+
+# Ensure /usr/local/lib/preon/ exists
+if [ ! -d "/usr/local/lib/preon/" ]; then
+    mkdir -p /usr/local/lib/preon/
+fi
+
+exit 0
+
