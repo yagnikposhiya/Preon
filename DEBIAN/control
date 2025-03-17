@@ -1,0 +1,8 @@
+Package: preon
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3
+Maintainer: Yagnik Poshiya <yagnikposhiya.research@gmail.com>
+Description: A custom Python-based CLI for ubuntu that allows natural-language file and directory management commands.
