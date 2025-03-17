@@ -1,0 +1,28 @@
+Preon/
+│── README.md  # General documentation (can be copied to /usr/share/doc/preon/)
+│── LICENSE  # License file (can be copied to /usr/share/doc/preon/)
+│── DEBIAN/
+│   ├── control
+│   ├── postinst
+│   ├── postrm
+│── usr/
+│   ├── local/
+│   │   ├── bin/
+│   │   │   ├── preon
+│   │   ├── lib/
+│   │   │   ├── preon/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── commands.py
+│   │   │   │   ├── data/
+│   │   │   │   │   ├── dir_commands.json
+│   ├── share/
+│   │   ├── doc/
+│   │   │   ├── preon/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── examples/
+│   │   │   │   │   ├── sample_config.conf
+│   │   ├── man/
+│   │   │   ├── man1/
+│   │   │   │   ├── preon.1.gz  # Man page for `man preon`
+
