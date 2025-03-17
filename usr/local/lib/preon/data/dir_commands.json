@@ -1,0 +1,4 @@
+{
+    "create dir": "os.makedirs('{}', exist_ok=True) or 'Directory created.'",
+    "delete dir": "os.rmdir('{}') or 'Directory removed.'"
+}
