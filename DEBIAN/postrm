@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+update-alternatives --remove preon /usr/bin/preon || true # Remove alternatives
+
+PREON_PATH="/usr/local/lib/preon"
+
+if [ -d "$PREON_PATH" ]; then
+    rm -rf "$PREON_PATH"
+    echo "Removed $PREON_PATH"
+fi
+
+# Optionally, remove the preon.py executable from /usr/local/bin
+if [ -f "/usr/local/bin/preon" ]; then
+    rm -f "/usr/local/bin/preon"
+    echo "Removed /usr/local/bin/preon"
+fi
+
+# Optionally, remove the symbolic link from /usr/bin
+if [ -L "/usr/bin/preon" ]; then
+    rm -f "/usr/bin/preon"
+    echo "Removed symlink /usr/bin/preon"
+fi
+
+exit 0
+
