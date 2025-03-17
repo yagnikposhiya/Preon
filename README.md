@@ -19,3 +19,26 @@ Ensure that Preon's directory is added to the `PYTHONPATH` environment variable:
 ### 4. Verify the Installation
 Check whether **Preon** is successfully installed by running:
 `preon --help`
+
+## Removal Guide
+
+Follow these steps to completly remove **Preon** from your system:
+
+### 1. Uninstall the Preon Debian Package
+Run the following command to remove the installed package:
+`sudo dpkg --remove preon`
+
+### 2. Remove Preon's Configuration
+Run the following command to remove Preon's configuration completly:
+`sudo dpkg --purge preon`
+
+### 3. Remove Preon's Python Path Configuration
+If you manually added Preon's directory to the `PYTHONPATH`, remove it from `~/.bashrc`:
+```sed -i '/export PYTHONPATH="\/usr\/local\/lib\/preon\/:\$PYTHONPATH"/d' ~/.bashrc
+source ~/.bashrc
+```
+### 4. Verify the Preon is Completly Removed
+Run the following command to ensure Preon is no longer installed:
+`preon --help`
+If it outputs, then Preon has been successfully removed:
+`Command 'preon' not found`
