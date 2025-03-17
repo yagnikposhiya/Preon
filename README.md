@@ -34,9 +34,9 @@ Run the following command to remove Preon's configuration completly:
 
 ### 3. Remove Preon's Python Path Configuration
 If you manually added Preon's directory to the `PYTHONPATH`, remove it from `~/.bashrc`:
-```sed -i '/export PYTHONPATH="\/usr\/local\/lib\/preon\/:\$PYTHONPATH"/d' ~/.bashrc
-source ~/.bashrc
-```
+`sed -i '/export PYTHONPATH="\/usr\/local\/lib\/preon\/:\$PYTHONPATH"/d' ~/.bashrc`
+`source ~/.bashrc`
+
 ### 4. Verify the Preon is Completly Removed
 Run the following command to ensure Preon is no longer installed:
 `preon --help`
