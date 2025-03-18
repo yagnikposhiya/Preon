@@ -1,4 +1,24 @@
 {
-    "create dir": "os.makedirs('{}', exist_ok=True) or 'Directory created.'",
-    "delete dir": "os.rmdir('{}') or 'Directory removed.'"
+    "create file": "os.system('touch {}') or os.system('ls --color=auto')",
+    "copy file": "os.system('cp {} {}')",
+    "copy file-keep-metadata": "os.system('cp -p {} {}')",
+    "copy file-ask-before-overwrite": "os.system('cp -i {} {}')",
+    "copy file-show-progress": "os.system('cp --verbose {} {}')",
+    "copy file-without-overwrite": "os.system('cp -n {} {}')",
+    "copy file-newer": "os.system('cp -u {} {}')",
+    "copy file-with-parent-dir-structure": "os.system('cp --parents {} {}')",
+    "copy file-follow-symlink": "os.system('cp -L {} {}')",
+    "show file": "os.system(\"ls -p --color=auto | grep -v '/'\")",
+    
+    "create dir": "os.system('mkdir -p {}') or os.system('ls --color=auto')",
+    "copy dir": "os.system('cp -r {} {}') ",
+    "copy dir-recursive": "os.system('cp -r {} {}')",
+    "copy dir-keep-metadata": "os.system('cp -rp {} {}')",
+    "copy dir-without-overwrite": "os.system('cp -rn {} {}')",
+    "copy dir-show-progress": "os.system('cp -vr {} {}')",
+    "show dir": "os.system('ls -d */ --color=auto')",
+    
+    "copy symlink-instead-actual-file": "cp -P {} {}",
+    "show all": "os.system('ls --color=auto')",
+    "remove any": "os.system('rm -rf {}') or os.system('ls --color=auto')"
 }
