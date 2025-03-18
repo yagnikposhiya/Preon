@@ -37,10 +37,10 @@ def execute_command(command,*args) -> Any:
 
     if command in COMMANDS:
         try:
-            command_code = COMMANDS[command].format(*args) # replace placeholders `{}` in the command string with arguments
-            result = eval(command_code) # executes the command dynamically
-            print(result)
+            command_code = COMMANDS[command].format(*args * COMMANDS[command].count('{}')) # replace placeholders `{}` in the command string with arguments
+            _ = eval(command_code) # executes the command dynamically; no need for storing output
+            # print(result)
         except Exception as e:
             print(f'Error: {e}')
     else:
-        print('Command not found.')
+        print(f'{command}: command not found')
