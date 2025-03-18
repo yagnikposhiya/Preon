@@ -42,3 +42,34 @@ Run the following command to ensure Preon is no longer installed:<br>
 `preon --help`
 If it outputs, then Preon has been successfully removed:<br>
 `Command 'preon' not found`
+
+## Build Your Own Debian Package for Preon
+
+Follow these steps to create a Debian package (.deb) for **Preon** on your local system.
+
+### 1. Clone the Repository
+Clone the repository to your local machine:<br>
+`git clone <WEB_URL>`
+
+### 2. Build the Debian Package
+Run the following command to generate the Debian package:<br>
+`dpkg-deb --build Preon`
+
+### 3. Locate the Generated `.deb` File
+Once the build is complete, check for the .deb package in your current directory:<br>
+`ls`<br>
+You will find `Preon.deb`, ready to be shared and installed on any Debian-based system.
+
+## Traditional vs. Preon Command Comparison
+
+| Action | Traditional Command | Preon Command |
+|--------|---------------------|---------------|
+| Create a text file | touch demo.txt | preon create file demo.txt|
+| Create a directory | mkdir demo_dir | preon create dir demo_dir |
+| Create directories in recursive way | mkdir -p demo_dir/demo_dir_2 | preon create dir demo_dir/demo_dir_2 |
+| Remove a text file | rm demo.txt | preon remove any demo.txt |
+| Remove a directory | rmdir directory | preon remove any demo_dir |
+| Remove directories in recursive way | rm -rf demo_dir | preon remove any demo_dir |
+| List all file and directories | ls | preon show all |
+| List all directories | ls -d */ | preon show dir |
+| List all files | ls -p <vertical_pipe> grep -v '/' | preon show file |
